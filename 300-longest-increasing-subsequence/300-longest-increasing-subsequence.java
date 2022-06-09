@@ -17,9 +17,9 @@ class Solution {
         {
             for(int j=0;j<i;j++)
             {
-                if(nums[j]<nums[i] && dp[j]<=dp[i])
+                if(nums[j]<nums[i] && dp[i]<=dp[j])
                 {
-                    dp[i]=Math.max(dp[i],1+dp[j]);
+                    dp[i]=1+dp[j];
                 }
             }
         }
