@@ -1,6 +1,8 @@
 class Solution {
     public List<String> mostVisitedPattern(String[] username, int[] timestamp, String[] website) {
     
+        
+        //Map of user names that holds list of Pairs of timestamp and user visited websites
         Map<String,List<Pair<Integer,String>>> usersMap=new HashMap();
         
         
@@ -11,7 +13,7 @@ class Solution {
             visits.add(new Pair<Integer,String>(timestamp[i],website[i]));
             usersMap.put(user,visits);
         }
-        
+        //Map to hold each unique pattern of 3 sites and set of users visited the pattern
         Map<String,Set<String>> patternMap=new HashMap();
         String result="";
         int maxCount=0;
