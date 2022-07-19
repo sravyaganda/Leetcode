@@ -14,8 +14,7 @@ class Solution {
             {
                 if(grid[i][j]=='*')
                 {
-                    q.add(new int[]{i,j,0
-                                    });
+                    q.add(new int[]{i,j,0});
                     break;
                 }
             }
@@ -44,7 +43,7 @@ class Solution {
                     int newRow=cell[0]+directions[d][0];
                     int newCol=cell[1]+directions[d][1];
                     int distance=cell[2];
-                    if(newRow<row && newRow>=0 && newCol<col && newCol>=0)
+                    if(newRow<row && newRow>=0 && newCol<col && newCol>=0 && grid[newRow][newCol]!='X')
                     {
                         if(grid[newRow][newCol]=='#')
                         {
