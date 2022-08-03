@@ -27,13 +27,8 @@ class Solution {
             {
                 continue;
             }
-              // else we will add it
                 if(nums.add(numbers[i]));
-                
-                //backtracking
                 backtrack(nums);
-                
-                //removing the last element to continue the order
                 nums.remove(nums.size()-1);
         }
     }
